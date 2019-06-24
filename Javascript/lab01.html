@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 01</title>
+    <!--dit script werkt met variabelen
+    auteur: Maria Boom
+    Datum: 8-2-2019
+    -->
+</head>
+<body>
+<h2>Lab 01</h2>
+<h3>Factuur</h3>
+<script>
+document.write('<br>FACTUUR');
+     var vandaag = new Date();
+     var dd = vandaag.getDate();
+     var mm = vandaag.getMonth() +1;
+     var jjjj = vandaag.getFullYear();
+     var factuurdatum = ('<br>'+dd+'-' + mm+'-'+ jjjj);
+
+     document.write("<br>De factuurdatum is: " +factuurdatum);
+
+     var nu = Date.now();
+     var eenDag = 86400000;
+     var morgen =  new Date (nu + (eenDag * 5));
+     var day = morgen.getDate();
+     var month = morgen.getMonth() +1;
+     var year = morgen.getFullYear();
+     var betaaldatum = ('<br>' +day+ '-'+ month+'-' + year)
+     document.write('<br>De betaaldatum is: ' +betaaldatum);
+
+     var klantnaam = ("Maria Boom");
+     var aantal = parseInt(prompt("aantal boeken te bestellen?"));
+     var titel = "Javascript";
+     var prijs = 39.99;
+     var bedrag = prijs*aantal;
+     var btw = bedrag/100 *6;
+     var totaal = bedrag + btw;
+     document.write("<br>Bedankt voor je bestelling: " +klantnaam);
+     document.write("<br>Boektitel is: " + titel);
+     document.write("<br>Aantal te bestellen: " +aantal);
+     document.write("<br>Prijs per boek is: " + prijs.toFixed(2));
+     document.write("<br>Het bedrag is: " +bedrag.toFixed(2));
+     document.write("<br>De BTW is: " +btw.toFixed(2));
+     document.write("<br>Het totale bedrag inclusief BTW is: " +totaal.toFixed(2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

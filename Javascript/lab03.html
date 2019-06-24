@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab03</title>
+  <!-- Auteur: Maria Boom
+       Datum: 27-2-2019
+       -->
+</head>
+<h2>Lab03</h2>
+<body>
+<script>
+var dearray = new Array('een', 'twee', '3', 'vier');
+document.write('<br>Test array..:' + dearray);
+document.write('<br>*********************************************************************************')
+
+dearray.push (5);
+var show = typeof dearray [4];
+
+document.write('<br>De waardes van de array zijn veranderd en ziet er nu als volgt uit: '+ dearray );
+document.write('<br>*********************************************************************************')
+document.write('<br>Het datatype van het vijfde element is: ' +show);
+document.write('<br>*********************************************************************************')
+
+delete dearray [4];
+document.write('<br>Het vijfde element is gedeleted. Dit kan je terugzien in de array: ' +dearray);
+document.write('<br>*********************************************************************************')
+dearray.unshift("nul");
+document.write('<br>Er is een element toegevoegd aan het begin van de array. Deze kan je ook terugzien: ' +dearray);
+document.write('<br>*********************************************************************************')
+
+delete dearray[0];
+var show2= typeof dearray[0];
+document.write('<br>Index 0 is verwijderd: ' +dearray);
+document.write('<br>*********************************************************************************')
+document.write('<br>Het datatype word vervolgens aangegeven van index [0]: ' +show2)
+document.write('<br>*********************************************************************************')
+
+delete dearray[1]
+document.write('<br>Het eerste element van de huidige array is verwijderd. Dit ziet er als volgt uit: ' +dearray);
+document.write('<br>*********************************************************************************');
+
+delete dearray[2];
+document.write('<br>Het tweede element van de huidige array is verwijderd. Dit ziet er dus als volgt uit: ' +dearray);
+document.write('<br>*********************************************************************************')
+
+
+</script>
+</body>
+</html>

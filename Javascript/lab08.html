@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab08</title>
+</head>
+<body>
+<script>
+
+var dagen = new Array('Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag');
+var maanden = new Array('December', 'Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November');
+
+var now = new Date();
+var weekdag = dagen[now.getDay()];
+var maand = maanden[now.getDay()];
+
+
+document.write('<br>De datum van vandaag is: ' +weekdag+ ' ' +maand +' '+ now.getDate()+' '+ now.getFullYear());
+var factuur = new Date();
+document.write('<br>De factuurdatum is: ' +weekdag+ ' '+maand+ ' '+ factuur.getDate()+ ' '+ factuur.getFullYear() );
+var eendag = 86400000;
+var termijn =  new Date (eendag * 30);
+var betaaltijd = (factuur.getTime() + termijn.getTime());
+
+var betaaldatum = new Date (betaaltijd);
+var weekDag = dagen[betaaldatum.getDay()]
+var Maand = maanden[betaaldatum.getMonth()]
+document.write('<br>De betaaldatum is: ' +weekDag +' '+ Maand +' '+betaaldatum.getDate() +' '+ betaaldatum.getFullYear());
+
+
+if (now > betaaldatum){
+    document.write('Meld incassobureau.')
+}
+else{
+
+    var resterende = ((betaaltijd - now)/ eendag);
+    document.write('<br> U heb nog: ' +resterende.toFixed(0)+ ' dagen om te betalen');
+}
+
+</script>
+</body>
+</html>

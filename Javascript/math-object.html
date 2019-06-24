@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math object</title>
+</head>
+<body>
+<script>
+
+var mijnArray = new Array(3.51,3.50,3.49,-3.55,-3.50,-3.49);
+//zonder apply achter.max en null, voor mijnArray, doet de functie het niet.
+document.write('<br> Hoogste element in mijn array is: ' + Math.max.apply(null, mijnArray));
+document.write('<br> Het laagste element in mijn array is: ' +Math.min.apply(null, mijnArray));
+
+//met deze loop heb je de getallen met decimalen afgerond, alles onder 0,50 blijft zelfde, erboven, volgende cijfer
+for(i=0; i < mijnArray.length; i++){
+    mijnArray[i] = Math.round(mijnArray[i]);
+}
+
+document.write('<br>Afgeronde elementen: ' +mijnArray);
+document.write('<br>Vul mijn array met willekeurige getallen');
+
+//deze loop fixt random cijfers voor je. floor, zorgt ervoor dat alle decimalen wegvallen.
+for (x=0; x<mijnArray.length; x++){
+    mijnArray[x] = Math.floor((Math.random()*10));
+    document.write(' ' + mijnArray[x]);
+}
+
+</script>
+
+</body>
+</html>

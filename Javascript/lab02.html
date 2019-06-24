@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Lab02 </title>
+   <!--lengte converten
+      auteur: Maria Boom
+      Datum: 27-2-2019
+       zonder parseInt doet document.write1 het niet
+      -->
+</head>
+<h2>Lab 02</h2>
+<body>
+<script>
+welkom = alert('Deze pagina converteerd jou ingevoerde lengte in meters om naar feet.')
+lengte = parseFloat(prompt("Wat is je lengte in meters? "));
+var feet = 3.28084;
+var som = lengte * feet;
+
+
+
+document.write("<br>Je lengte in meters is: " +lengte.toFixed(2)+ ' m');
+document.write("<br>Je lengte in feet is: " +som.toFixed(2) +' ft');
+
+</script>
+
+
+</body>
+</html>

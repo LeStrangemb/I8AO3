@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeof</title>
+</head>
+<body>
+<p id="typeof"></p>
+<p id="typeof1"></p>
+<p id="typeof2"></p>
+<script>
+    var x = true;
+    var y = 15;
+    var z = "Hallo wereld";
+
+
+    document.getElementById("typeof").innerHTML= typeof x;
+    document.getElementById("typeof1").innerHTML= typeof y;
+    document.getElementById("typeof2").innerHTML= typeof z;
+
+
+//dit is ook getest in de console en dit zag er zo uit:
+    //var x = true;
+    //var y = 15;
+    //var z = "Hallo wereld";
+    //console.log(typeof x);
+    //console.log(typeof y);
+    //console.log(typeof z);
+
+    //VM546:4 boolean
+    //VM546:5 number
+    //VM546:6 string
+    //undefined
+
+</script>
+
+</body>
+</html>

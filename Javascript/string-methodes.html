@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String methodes</title>
+  <script src="laaaab1.5.js"></script>
+</head>
+<body>
+<script>
+tekst = 'Dit document is een lang document maar ook een simpel document';
+//indexOf geeft de positie terug van een bepaalde waarde, de index.
+var titel = 'javascript';
+
+document.write('<br>Index van letter s is: ' +titel.indexOf('s'));
+
+var string = 'Dit is een lange tekst met daarin het woord javascript';
+
+document.write('<br>Dit is de index van het woord javascript. '  +string.indexOf('javascript'));
+document.write('<br>Dit is de index van een woord die niet in de zin staat zodat we -1 terugkrijgen'
++string.indexOf('index'));
+
+if(navigator.userAgent.indexOf('MSIE') != -1){
+    document.write('De browser is Internet explorer.');
+}
+else if (navigator.userAgent.indexOf('Firefox') != -1){
+    document.write('<br>De browser is Firefox ');
+}
+else if (navigator.userAgent.indexOf('Chrome') != -1){
+    document.write('<br>De browser is chrome.');
+}
+
+document.write('<br> ' +titel.length+ '<br>');
+
+var spiegeling = ' ';
+var title = 'JavaScript';
+for (x=0; x<title.length; x++){
+    teken = title.charAt(x);
+    spiegeling = teken + spiegeling;
+}
+document.write('<br> Javascript in spiegelbeeld ' +spiegeling);
+
+//met de methode split kan je een string knippen in kleinere strings
+
+var tekst = 'Dit is een lange tekst met het woord JavsScript';
+splitsing = tekst.split(' ');
+document.write('<br>' + splitsing);
+//de substring levert een deel van de orginele string op
+//de substr ook, alleen het verschil is dat:
+// substring is gebasseerd op beginindex en eindindex. substr op beginindex en lengte
+
+string = 'abcdefg';
+string.substring(3,6) // retourneerd 'defg'. begint op de derde positie en eindigt bij de 7e positie.
+var string = 'dit is een lange string met daarin het woord javascript';
+gebruiker = 'supergebruiker';
+gebruiker.substr(5,9) // retourneerd gebruiker. begint op index 5
+
+//een kapot moeilijke manier om het woord javascript wegtelaten, naar mijn mening overbodig.
+string = string.substr(0,string.indexOf('javascript')) + string.substr(string.indexOf('javascript')+10, string.length);
+document.write('<br>String is nu: ' +string);
+
+//trim verwijdert alle spaties aan het begin en aan het einde van een string
+tekst = ' javascript ';
+tekst.trim();
+
+//toLowercase or toUppercase zet een woord om naar hoofdletters of kleine letters
+naam='Marlies'
+naam.toLowerCase();
+naam.toUpperCase();
+
+var cursus = prompt('Kies een van de volgende ' + 'cursussen HTML of JavaScript');
+if (cursus.toLowerCase() == 'html' || cursus.toLowerCase() == 'javascript'){
+    document.write('<br>Je hebt =: ' +cursus.toUpperCase()+ 'gekozen');
+}
+else{
+    document.write('<br>Kies een geldige cursus.');
+}
+
+
+string = tekst.substr(0,string.indexOf('document')) + tekst.substr(string.indexOf('document')+10, tekst.length);
+
+
+</script>
+
+</body>
+</html>

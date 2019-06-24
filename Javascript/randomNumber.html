@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>random Number</title>
+</head>
+<body>
+<p id="randomnumber"></p>
+<p id="goed"></p>
+<p id="fout"></p>
+<script>
+
+var number = prompt ("Kies een nummer onder de 10..", "**");
+//zonder de math.floor word er geen heel getal gekozen. Math.random kiest nummers tussen 0 en 1. daarom moeten deze *10 worden gedaan.
+var random = Math.floor(Math.random() * 10) +1;
+
+
+if (number == random){
+    document.getElementById("goed").innerHTML= "Jouw gekozen getal komt overeen met het random getrokken getal!..: " +random
+}
+else if (number!= random){
+    document.getElementById("fout").innerHTML= "Jouw gekozen getal: " +number+ ". Komt niet overeen met het random getrokken getal..: " +random
+}
+
+</script>
+</body>
+</html>

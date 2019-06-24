@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+var x = 2;  // De x-coordinaat van het zwarte wordt in deze variabele bijgehouden
+var y = 2;  // De y-coordinaat van het zwarte wordt in deze variabele bijgehouden
+
+function beweeg(event)
+{
+    if(window.event)
+        event = window.event;
+
+    var table = document.getElementById("gameboard");
+    table.rows[y].cells[x].style.backgroundColor = "#fff";  // Maak het huidige zwarte vakje wit, we gaan immers hier vandaan verplaatsen
+                                                            // Als er geen pijltjes toets ingedrukt is blijven de coordinaten ongewijzigd
+                                                            // en zal het vakje dus opnieuw zwart worden gemaakt aan het einde van deze functie
+
+    switch(event.keyCode)
+    {
+        case 37:                                            // Pijltje naar links
+            if(--x < 0)                                     // Trek 1 van x af, als het resultaat kleiner is dan 0 (dus buiten de tabel valt)
+            {
+                x = 0;                                      // Maak x dan weer 0
+            }
+        break;
+
+        case 38:                                            // Pijltje naar boven
+            if(--y < 0)                                     // Trek 1 van y af, als het resultaat kleiner is dan 0 (dus buiten de tabel valt)
+            {
+                y = 0;                                      // Maak y dan weer 0
+            }
+        break;
+
+        case 39:                                            // Pijltje naar rechts
+            if(++x > 4)                                     // Tel 1 bij x op, als het resultaat groter is dan 4 (dus buiten de tabel valt)
+            {
+                x = 4;                                      // Maak x dan weer 4
+            }
+        break;
+
+        case 40:                                            // Pijltje naar onder
+            if(++y > 4)                                     // Tel 1 bij y op, als het resultaat groter is dan 4 (dus buiten de tabel valt)
+            {
+                y = 4;                                      // Maak y dan weer 4
+            }
+        break;
+    }
+
+    table.rows[y].cells[x].style.backgroundColor = "#000";  // Maak het vakje met de nieuwe coordinaten zwart
+}
+
+function maakEvents()
+{
+    document.body.onkeydown = beweeg;
+}
+window.onload = maakEvents;
+</script>
+<table id="gameboard" style="empty-cells:show;width:250px;height:250px;">
+ <tr><td></td><td></td><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td style="background-color:#000;"></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+Bestuur het zwarte vakje met de pijltjes
+</body>
+</html>

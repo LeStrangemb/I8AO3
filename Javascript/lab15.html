@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <script src="lab15.js"></script>
+</head>
+<body>
+
+<script>
+var schrijf = "Vul in tekstbox 1 een bestaand woord uit de onderstaande zin. En in tekstbox 2 een nieuwwoord die je wil laten vervangen"
+var zet = schrijf.bold();
+document.write(zet);
+var str = "<br>Dit document is een lang document maar wel een simpel document.";
+document.write(str);
+
+</script>
+<form name ='form'>
+<input type = "text" name="woord" placeholder="Vul een woord uit de zin in.">
+<input type = "text" name="nieuwwoord" placeholder="Vul een nieuwwoord in">
+<input type="button" value="conversie" onclick="vervangen()"/>
+</form>
+</body>
+</html>

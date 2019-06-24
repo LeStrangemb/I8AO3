@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline</title>
+</head>
+<body>
+<button id="btnPrompt" onclick ="toonPrompt()"> Voer code in</button>
+<p id="divResult"></p>
+
+<script>
+    function toonPrompt(){
+        var code = prompt('Vul uw promotiecode in', 'uw code');
+        var tekst = 'De code die u invoerde was: ' + code;
+        document.getElementById("divResult"). innerHTML = tekst
+    }
+
+</script>
+
+
+
+</body>
+</html>

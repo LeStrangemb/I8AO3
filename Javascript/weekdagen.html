@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekdagen</title>
+</head>
+<body>
+
+
+<script>
+
+    var datum = new Date();
+
+var weekdag = new Array()
+    weekdag[0]= "Zondag";
+    weekdag[1]= "Maandag";
+    weekdag[2]= "Dinsdag";
+    weekdag[3]= "Woensdag";
+    weekdag[4]= "Donderdag";
+    weekdag[5]= "Vrijdag";
+    weekdag[6]= "Zaterdag";
+
+    var vandaag = weekdag[datum.getDay()];
+
+    document.write("De dag vandaag is: " +vandaag);
+
+</script>
+</body>
+</html>

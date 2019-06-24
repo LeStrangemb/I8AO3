@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forlus</title>
+  <!-- auteur: Maria Boom -->
+</head>
+<body>
+
+<script>
+
+var student = new Array('Zakaria', 'Albert', 'Hamza', 'Mike', 'Pieter', 'Harry');
+
+for (x=0; x<student.length; x++ ){
+    if (x % 2 == 0){
+        document.write ("<br>De element is: "+x+ " Naam student: " + student[x]);
+    }
+}
+
+var tekst = 'Hij lijkt een beetje op Nelson Mandela.';
+lengte = tekst.length;
+spatieA = 0;
+spatieI = 0;
+spatieE = 0;
+spatieO = 0;
+spatieU = 0;
+document.write('<br>');
+for(x=0; x<lengte; x++){
+    teken = tekst.charAt(x);
+    document.write(teken);
+
+
+        if (teken == 'a'){
+            spatieA ++;
+            }
+        if (teken == 'i'){
+                    spatieI ++;
+                    }
+        if (teken == 'e'){
+                    spatieE ++;
+                    }
+        if (teken == 'o'){
+                    spatieO ++;
+                    }
+        if (teken == 'u'){
+                    spatieU ++;
+                    }
+
+}
+document.write('<br> Aantal a\'s:' + spatieA + '<br> Aantal i\'s:' + spatieI + '<br> Aantal e\'s:' + spatieE +
+'<br> Aantal o\'s:' + spatieO + '<br> Aantal u\'s:' + spatieU );
+
+
+
+</script>
+</body>
+</html>

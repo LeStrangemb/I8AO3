@@ -1,0 +1,30 @@
+opdracht1
+SELECT fname + ' ' + lname AS Naam, max_lvl - min_lvl AS uitkomst
+FROM employees, jobs
+GROUP BY fname, lname, max_lvl, min_lvl
+
+
+
+opdracht2
+SELECT type
+FROM titles
+GROUP BY type
+
+
+opdracht3
+SELECT title, price AS Prijs_excl_BTW, price / 100*9 + price AS prijs_incl_BTW
+FROM titles
+
+
+opdracht4
+SELECT country, count(*)
+FROM publishers
+GROUP BY country
+
+opdracht5
+SELECT fname, lname, pub_name, country
+FROM employees, publishers
+
+WHERE country = 'USA'
+
+opdracht6

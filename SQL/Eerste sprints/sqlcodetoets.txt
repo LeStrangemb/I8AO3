@@ -1,0 +1,45 @@
+
+opdracht1
+SELECT 
+pub_name, 
+city,
+state
+
+FROM publishers 
+ORDER BY state, city
+
+
+opdracht2
+SELECT 
+title,
+price,
+pubdate
+
+FROM titles
+
+WHERE price >= 20 AND price <= 30
+
+opdracht3
+SELECT state, contract, au_lname
+FROM authors
+
+WHERE au_lname LIKE '%R' AND state LIKE 'CA' AND contract LIKE 1
+//HET EINDIGT MET R, BEGINT NIET MET R.
+
+opdracht4
+SELECT titles.title AS titel, publishers.pub_name AS naam
+FROM publishers INNER JOIN titles ON titles.pub_id = publishers.pub_id 
+ORDER BY pub_name, title ASC
+
+opdracht5 
+SELECT ytd_sales AS Aantal_boeken, pub_name AS Uitgever, ytd_sales / royalty AS Gemiddelde_prijs
+
+FROM titles, publishers
+*note: ik wist niet wat de aantal boeken waren in de tabel, omdat er sales achter stond leek me dat het meest logisch.
+
+opdracht6
+SELECT fname AS Werknemers, hire_date AS Datum, pub_id AS uitgever
+FROM employees
+WHERE pub_id = '0736' AND pub_id = '9999' AND hire_date <= '01/01/1990' 
+  ?? 
+

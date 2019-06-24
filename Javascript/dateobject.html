@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date object</title>
+</head>
+<body>
+<script>
+//new Date showt de huidige datum, tijd etc.
+var vandaag = new Date();
+document.write('<br>Opgave 46: ' +vandaag);
+
+//zo reken je de dag van morgen uit.
+var nu = Date.now();
+var eenDag = 86400000;
+var morgen = new Date(nu + eenDag);
+document.write('<br>Opgave 47: De datum morgen is: ' +morgen);
+
+//datum met date string
+//waar dient deze voor?
+var schooljaar = new Date ('2015-09-04');
+
+//datum met datum en tijd string
+var wintertijd = new Date ('2015-10-28T03:00:00');
+
+document.write('<br>Opgave 48: Begin wintertijd is: ' +wintertijd);
+
+//variabel maken met eigen geboortedag, show geboortedag en tijd weer
+
+var geboortedag = new Date('1998-09-02T01:30:00');
+
+document.write('<br>Opgave 48: Ik ben geboren op deze datum en dit tijdstip: ' +geboortedag);
+//wat houden al die cijfers in?
+beginSchooldag = new Date (2015,8,9,8,30);
+document.write('<br>Opgave 49: Begin schooldag: ' +beginSchooldag);
+
+nu = Date.now();
+document.write('<br>Opgave 50: Nu: ' +nu);
+var dagen = ((nu -beginSchooldag) / eenDag);
+document.write(' Aantal dagen sinds begin schooldag: ' +dagen.toFixed(0));
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

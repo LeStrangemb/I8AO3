@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 04</title>
+</head>
+<body>
+
+<script>
+
+var palet = [];
+palet.push('zwart', 'rood', 'wit', 'paars', 'geel')
+
+var nieuwekleur = prompt('Typ een nieuwe kleur in: ');
+palet.push(nieuwekleur);
+document.write('<br>De array met nieuwe kleur aan het einde: ' +palet);
+document.write('<br>*********************************************************************************')
+
+var nieuwekleur = prompt('Typ een nieuwe kleur in: ')
+palet.unshift(nieuwekleur);
+document.write('<br>De array met nieuwe kleur aan het begin: ' +palet);
+document.write('<br>*********************************************************************************')
+
+palet.sort()
+document.write('<br>De array op alfabetische volgorde: ' +palet);
+document.write('<br>*********************************************************************************')
+
+var palet2 = palet.splice(0,3);
+
+document.write('<br>Het eerste gesplitste deel van het palet is: ' + palet);
+document.write('<br>*********************************************************************************')
+document.write('<br>Het tweede gesplitste deel van het palet is: ' +palet2);
+document.write('<br>*********************************************************************************')
+
+var palet3 = palet.splice(0);
+document.write('<br>Palet is gekopieerd, de uitkomst hiervan is: ' +palet3 );
+document.write('<br>*********************************************************************************')
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array methodes</title>
+</head>
+<body>
+
+<script>
+//array naam= studenten met vijf elementen.
+    var studenten = new Array(
+        "Zakaria", "Albert", "Hamsa", "Mike", "Pieter");
+    document.write("<br>Opgave 24: Studenten: " +studenten);
+    //Een pointer is een tweede naam voor een object. in dit geval is team de pointer van studenten
+    team = studenten;
+    document.write("<br>Opgave 25: Team: " +team);
+    //een positie wijzigen in een array kan je zo doen:
+    team[0]= "Umut";
+    document.write(
+        "<br>Opgave 26: Element[0] is gewijzigd: " +studenten);
+
+//Met shift kan je het eerste element van een array verwijderen
+studenten.shift();
+document.write("<br>Opgave 27: Resultaat van shift: " +studenten);
+
+//met unshift kan je 1 of meerdere elementen aan het begin van de array toevoegen
+studenten.unshift("Jozef", "Umut");
+document.write("<br>Opgave 28: Resultaat van unshift: " +studenten);
+// met element pop kan je het laatste element uit de array verwijderen
+studenten.pop();
+document.write("<br>Opgave 29: Resultaat van pop: " +studenten);
+//met push kan je 1 of meerdere elementen toevoegen aan het einde van de array en als de array leeg is kan je hem op deze manier vullen.
+studenten.push("Pieter", "David");
+document.write("<br>Opgave 30: Resultaat  van push: " +studenten);
+// met deze methode kan je een array opsplitsen. (2,4) betekend dat hij begint mij positie 2 en 4 plaatsen neemt
+klas = studenten.splice(2,4);
+document.write("<br>Opgave 31: Resultaat<br>studenten: " +studenten + "<br> klas: " +klas);
+// met sort kan je ordenen in een alfabetische volgorde
+studenten.sort();
+document.write("<br>Opgave 32: Resultaat van sort: " +studenten);
+//hiermee kunnen we een array ordenen in een omgekeerde volgorde
+studenten.reverse();
+document.write("<br>Opgave 33: Resultaat van reverse: " +klas);
+//zo kunnen we bekijken of er een bepaalde element in een array bestaat.
+index = studenten.indexOf("Jozef");
+document.write("<br>Opgave 34: Resultaat van indexOf: " +index);
+//om een specifieke element te verwijderen in een array kan je dit gebruiken, het derde element blijft staan maar is wel leeg.
+delete klas[2];
+document.write("<br>Opgave 35: Resultaat van delete: " +klas);
+// met typeof kan je checken wat voor datatype een element is:
+document.write("<br>Opgave 36: Datatype van gedelete element is: " + typeof klas [2]);
+//om een specifiek array element te verwijderen maak je gebruik van:
+klas.splice(2,1);
+document.write("<br>Opgave 37: Element volledig verwijderd: " +klas);
+//hier zoek je eerst op of jozef bestaat en vervolgens wil je hem verwijderen.
+//splice (index,1) --> index verwijst naar jozef. 1 staat voor 1 plek verwijderen.
+index= studenten.indexOf("Jozef");
+studenten.splice(index, 1);
+document.write("<br>Opgave 38: Specifieke student verwijderd: " +studenten);
+
+klas2 = klas.slice();
+document.write("<br>Opgave 39: Resultaat van kopieren: " +klas2);
+var myString = klas.join("|");
+document.write("<br>Opgave 40: Resultaat van join: " +myString);
+
+var myArray = myString.split("|");
+document.write("<br>Opgave 41: Resultaat van split: " +myArray);
+
+
+</script>
+
+</body>
+</html>

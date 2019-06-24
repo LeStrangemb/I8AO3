@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yahtzee</title>
+</head>
+<body>
+<h3>Deze pagina gooit 5 dobbelstenen voor je en berekend vervolgens de som van deze getallen</h3>
+<h3><br>Klik op de button.</h3>
+<button id="btnPrompt" onclick =test()> Gooi dobbelsteen</button>
+<p id="divResult"></p>
+
+<script>
+    function test(){
+      var ran1 = new Array();
+      var som = 0;
+      document.write('Je gegooide getallen zijn: ');
+        for (var i = 0; i < 5; i++) {
+            ran1.push(Math.floor(Math.random()*6 ) +1);
+            som += ran1[i];
+
+                   }
+document.write(ran1);
+document.write('<br> De som van deze getallen is: ' +som);
+}
+</script>
+</body>
+</html>

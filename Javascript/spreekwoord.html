@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spreekwoord</title>
+</head>
+<body>
+
+<script>
+    var datum = new Date();
+    var weekdag = new Array()
+    weekdag[0]= "Zondag";
+    weekdag[1]= "Maandag";
+    weekdag[2]= "Dinsdag";
+    weekdag[3]= "Woensdag";
+    weekdag[4]= "Donderdag";
+    weekdag[5]= "Vrijdag";
+    weekdag[6]= "Zaterdag";
+
+var spreekwoorden = new Array();
+
+    spreekwoorden [0]= "Oost west, thuis best." ;
+    spreekwoorden [1]= " Eigen haard is goud waard.";
+    spreekwoorden [2]= " Haastige spoed is zelden goed.";
+    spreekwoorden [3]= " Beter laat dan nooit.";
+    spreekwoorden [4]= " Wie het laatst lacht, lacht het best.";
+    spreekwoorden [5]= " De morgenstond heeft goud in de mond.";
+    spreekwoorden [6]= " Zoals het klokje thuis tikt, tikt het nergens.";
+
+
+
+    var vandaag = weekdag[datum.getDay()];
+    var vandaag2 = spreekwoorden[datum.getDay()];
+    document.write("De dag vandaag is: " +vandaag +"..."+ vandaag2);
+
+</script>
+
+</body>
+</html>

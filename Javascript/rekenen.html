@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rekenen</title>
+</head>
+<body>
+<p id="test"></p>
+<p id="test1"></p>
+<script>
+var getal1 = prompt("Voer het eerste getal in", "****");
+var getal2 = prompt("Voer een tweede getal in", "****");
+var string = prompt ("Voer in woordvorm: plus, min, maal of delen in.");
+
+if (string == "plus"){
+    var som = +getal1 + +getal2;
+    document.getElementById("test").innerHTML = som;
+}
+else if (string == "min"){
+    var som1 = getal1- getal2;
+    document.getElementById("test").innerHTML = som1;
+}
+else if(string == "maal"){
+    var som2 = getal1 * getal2;
+    document.getElementById("test").innerHTML = som2;
+}
+else if(string == "delen"){
+    var som3 = getal1 / getal2;
+    document.getElementById("test").innerHTML = som3;
+}
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab11 telefoonnummer</title>
+  <!--auteur: Maria Boom -->
+</head>
+<body>
+<script>
+var getal = new Array();
+getal[0] = 'nul';
+getal[1] = 'een';
+getal[2] = 'twee';
+getal[3] = 'drie';
+getal[4] = 'vier';
+getal[5] = 'vijf';
+getal[6] = 'zes';
+getal[7] = 'zeven';
+getal[8] = 'acht';
+getal[9] = 'negen';
+
+var telefoon = prompt('Voer je 06-nummer in: ');
+
+if (telefoon.length < 10 || telefoon.length > 10){
+    alert("Voer een 10 cijferig 06- telefoonnummer in: ")
+
+}
+
+else {
+document.write("<br>Uw ingevoerde telefoonnummer is: " +telefoon+ "<br>");
+for (x=0; x<telefoon.length; x++){
+
+    teken = telefoon.charAt(x);
+     switch (teken){
+
+                 case '0':
+                 document.write(" "+getal[0]);
+                  break;
+                  case '1':
+                  document.write(" "+getal[1]);
+                  break;
+                  case '2':
+                  document.write(" "+getal[2]);
+                  break;
+                  case '3':
+                  document.write(" "+getal[3]);
+                  break;
+                  case '4':
+                  document.write(" "+getal[4]);
+                  break;
+                  case '5':
+                  document.write(" "+getal[5]);
+                  break;
+                  case '6':
+                  document.write(" "+getal[6]);
+                  break;
+                   case '7':
+                   document.write(" "+getal[7]);
+                   break;
+                  case '8':
+                  document.write(" "+getal[8]);
+                   break;
+                  case '9':
+                  document.write(" "+ getal[9]);
+
+
+
+     }
+}
+}
+
+</script>
+</body>
+</html>

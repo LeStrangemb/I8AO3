@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 01 en Lab 06/07</title>
+    <!--dit script werkt met variabelen en data
+    auteur: Maria Boom
+    Datum: 8-2-2019 // 5-3-2019
+    -->
+</head>
+<body>
+<h2>Lab 01 en Lab 06 en Lab07</h2>
+<h3>Factuur</h3>
+<script>
+document.write('<br>FACTUUR');
+//hier word een variable aangemaakt met de huidige datum
+     var vandaag = new Date();
+     //hier worden de dag, maand en jaar eruit gehaald en in een nieuwe variable gezet
+     var dd = vandaag.getDate();
+     // de +1 is omdat januari begint met 0
+     var mm = vandaag.getMonth() +1;
+     var jjjj = vandaag.getFullYear();
+     var factuurdatum = (dd+'-' + mm+'-'+ jjjj);
+
+     document.write("<br>De factuurdatum is: " +factuurdatum);
+
+     var nu = Date.now();
+     var eenDag = 86400000;
+     //we willen de betaaldatum weten. en dat was de factuurdatum +5 dagen. 1 dag = 86400000
+
+     var tag =  new Date (nu + (eenDag * 5));
+     var day = tag.getDate();
+     var month = tag.getMonth() +1;
+     var year = tag.getFullYear();
+     var betaaldatum = ( day+ '-'+ month+'-' + year)
+     document.write('<br>De betaaldatum is: ' +betaaldatum);
+
+     var klantnaam = ("Maria Boom");
+     //je gebruikt parseint om een string te converteren naar een integer
+     var aantal = parseInt(prompt("Aantal boeken te bestellen?"));
+     var titel = "Javascript";
+     var prijs = 39.99;
+     //formule voor de totale prijs zonder btw
+     var bedrag = prijs*aantal;
+     //btw bedraagt 6%
+     var btw = bedrag/100 *6;
+     //formule totale prijs inclusief btw
+     var totaal = bedrag + btw;
+     var bezorgkosten = 15;
+     //inhoud prompt converteren naar kleine letters
+     var woonplaats = prompt('Wat is je woonplaats?').toLowerCase();
+     var postcode = prompt ('Voer je postcode in: ');
+     var post = postcode.slice(4,6);
+
+     document.write("<br>Bedankt voor je bestelling: " +klantnaam);
+     document.write("<br>Uw woonplaats is: " +woonplaats);
+     document.write("<br>Boektitel is: " + titel);
+     document.write("<br>Aantal te bestellen: " +aantal);
+     //tofixed gebruik je om het getal met twee decimalen te showen
+     document.write("<br>Prijs per boek is: " + prijs.toFixed(2)+ ',-');
+     document.write("<br>Het bedrag is: " +bedrag.toFixed(2)+ ',-');
+     document.write("<br>De BTW is: " +btw.toFixed(2)+ ',-');
+     document.write("<br>Het totale bedrag inclusief BTW is: " +totaal.toFixed(2)+ ',-');
+
+
+
+
+     /** Voorwaarde = als woonplaats amsterdam is en de postcode is hoger dan 1000 en kleiner dan 2000 en postcode eindigt
+     * met letters tussen AA en BB
+      */
+     var voorwaarde = woonplaats == 'amsterdam' && postcode > '1000' && postcode < '2000' && post >= 'AA' && post <= 'BB' ;
+
+     //word er aan voorwaarde voldaan dan geen bezorgkosten
+     if (voorwaarde){
+         alert('U betaald geen bezorgkosten! ');
+         //zet bezorgkosten op 0 euro
+         var bezorgkosten = 0;
+         var totaaltot = totaal +bezorgkosten;
+
+         document.write('<br>De bezorgkosten zijn: ' +bezorgkosten + ',-')
+         document.write('<br>De totale kosten zijn dus: ' +totaaltot.toFixed(2) + ',-')
+     }
+     else {
+         alert('U betaald bezorgkosten.');
+         var totaaltat = totaal + bezorgkosten;
+         document.write('<br>De bezorgkosten zijn: ' +bezorgkosten + ',-' )
+         document.write('<br>De totale kosten zijn dus: ' +totaaltat.toFixed(2) + ',-' )
+     }
+
+
+</script>
+
+</body>
+</html>

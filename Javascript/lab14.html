@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab14</title>
+  <!-- auteur: Maria Boom -->
+</head>
+<body>
+
+<script>
+document.write('Deze pagina genereerd 5 string met 5 random letters.<br>');
+//je maakt een functie met een variable
+function makeid(length) {
+    //een lege variable waarin je de return kan sturen
+   var result           = ' ';
+   var characters       = 'abcdefghijklmnopqrstuvwxyz';
+   // je maakt de lengte aan waarvan je wil dat de math random het pakt, als je een cijfer er neer zet bijv 5,
+   //dan pakt hij de eerste 5 van de string
+//met de array doe je het zelfde formule is : array(x) ipv characters.charAt
+   var charactersLength = characters.length
+   var x = 0;
+   for ( var i = 0; i < length; i++ ) {
+       //hij vult de variable result met de karakters die hij pakt
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+document.write(makeid(5) + ' ' +makeid(5)+' '+makeid(5)+' '+makeid(5)+' '+makeid(5) );
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For in lus</title>
+  <!-- auteur: Maria Boom -->
+</head>
+<body>
+
+<script>
+var laptops = new Array();
+
+laptops['macbook'] = <!-- hoofdpropertie / object -->
+{'model':'air', 'voorraad':2000, 'prijs':1090}; <!-- property met waarden -->
+laptops['asusbook'] =
+{'model':'wind', 'voorraad':1000, 'prijs':990};
+laptops['dellbook'] =
+{'model':'fire', 'voorraad':987, 'prijs':890};
+
+<!-- deze lus laat alle hoofdproperties zien van de array. deze properties heb je een naam aan gegeven: merk-->
+<!-- deze lus zorgt ervoor dat alle properties met waarden worden laten zien -->
+
+
+for(var merk in laptops){
+   document.write('<br>' +merk);
+   for(var property in laptops[merk]){
+    document.write('<br>'+property + ': ' +laptops[merk][property]);
+     }
+ }
+</script>
+</body>
+</html>

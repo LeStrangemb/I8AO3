@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab05</title>
+</head>
+<body>
+<script>
+//vraagt je om een deadline in te voeren.
+einddatum = prompt('Wat is de einddatum? JJJJ-MM-DD ');
+//maakt een nieuwe variabel aan die word geconverteerd naar een echte datum
+var deadline = new Date(einddatum);
+
+document.write('De deadline is: ' +deadline);
+//datum van vandaag
+var nu = Date.now();
+//een variable die een dag inhoud. want 1 dag heeft 86400000 miliseconden
+var dag = 86400000;
+
+//de grootste datum moet eerst anders krijg je NaN
+var resterende = ((deadline- nu)/dag);
+
+if (resterende >= 1 ){
+document.write('<br>Er zijn nog ' +resterende.toFixed(0)+ ' dagen te gaan ');
+}
+
+else{
+
+   document.write('Er is nog' +resterende.toFixed(0)+ 'dag te gaan');
+}
+
+
+</script>
+
+</body>
+</html>

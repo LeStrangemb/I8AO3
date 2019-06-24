@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lab14 met array</title>
+</head>
+<body>
+<script>
+document.write('Deze pagina genereerd 5 string met 5 random letters.<br>');
+
+function makeid(length) {
+//length is de lengte die jij invult als parameter als jij de functie aanroept.
+   var result           = ' ';
+   characters       = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+//met de array doe je het zelfde formule is : array(x) ipv characters.charAt
+   var charactersLength = characters.length;
+   //als i kleiner is dan doorgegeven lengte, laat loop doorlopen.
+   for ( var i = 0; i < length; i++ ) {
+       //hij vult de variable result met de karakters die hij pakt per keer in de loop van randomItem
+    //formule: naamArray[Math.floor(Math.random()*characters.length)]
+   var randomItem = characters[Math.floor(Math.random()*characters.length)]
+   //result = ' ' + randomItem etc tot de lengte bereikt is
+   result += randomItem;
+
+   }
+   return result;
+}
+
+document.write(makeid(5) + ' ' +makeid(5)+' '+makeid(5)+' '+makeid(5)+' '+makeid(5) );
+
+</script>
+</body>
+</html>

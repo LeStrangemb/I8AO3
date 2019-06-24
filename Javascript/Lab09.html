@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab09</title>
+</head>
+<body>
+
+<script>
+var rol = prompt('Wat is je rol? admin of student? ');
+var code = prompt('Wat is je inlogcode? ');
+
+switch(rol){
+
+    case 'student':
+        if (code === 'student'){
+            document.write('Welkom student! ');
+        }
+        break;
+
+     case 'admin':
+         if (code === 'admin')
+         {
+            document.write('Welkom admin!');
+         }
+        break;
+
+      default:
+          document.write('rol ongeldig.')
+}
+
+
+</script>
+
+</body>
+</html>
